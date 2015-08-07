@@ -3,18 +3,19 @@
  * Client test.
  */
 
-var Net = require('net');
-var Debug = require('../Framework/Debug.js');
+var net = require('net');
+var Debug = require('../../Framework/Debug.js');
 
 var HOST = '127.0.0.1';
-var PORT = 6969;
+var PORT = 8080;
 
-var client = new Net.Socket();
+var client = new net.Socket();
 client.connect(PORT, HOST, function() {
 
-    Debug.log('CONNECTED TO: ' + HOST + ':' + PORT);
+    console.log('CONNECTED TO: ' + HOST + ':' + PORT);
     // 建立连接后立即向服务器发送数据，服务器将收到这些数据
-    client.write('I am one lei!');
+    client.write('I am Chuck Norris!');
+
 });
 
 // 为客户端添加“data”事件处理函数
@@ -30,9 +31,4 @@ client.on('data', function(data) {
 // 为客户端添加“close”事件处理函数
 client.on('close', function() {
     Debug.log('Connection closed');
-});
-
-// 为客户端添加“close”事件处理函数
-client.on('error', function() {
-    Debug.log('error occur!');
 });
