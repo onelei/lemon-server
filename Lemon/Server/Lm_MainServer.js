@@ -4,9 +4,9 @@
  */
 
 var net = require('net');
-var Debug = require('../Framework/Debug.js');
-var LColor = require('../Framework/LColor.js');
-var RemoteClient = require('../Framework/RemoteClient.js');
+var Debug = require('../Framework/Lm_Debug.js');
+var LColor = require('../Framework/Lm_Color.js');
+var RemoteClient = require('../Framework/Lm_RemoteClient.js');
 
 var HOST = '127.0.0.1';
 var PORT = 8080;

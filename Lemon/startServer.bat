@@ -1,2 +1,2 @@
 cd Server
-node Server.js
+node Lm_MainServer.js

@@ -4,20 +4,20 @@
  */
 var Client = require('Client.js');
 
-var Answer = function()
+var Lm_Response = function()
 {
 
 };
 
-module.exports = Answer;
+module.exports = Lm_Response;
 
 // Answer request;
-Answer.write = function(server,data)
+Lm_Response.write = function(server,data)
 {
     server.write('You said "' + data + '"');
 };
 
-Answer.sendAll = function(socket,data)
+Lm_Response.sendAll = function(socket,data)
 {
     Client.clients.forEach(function(otherSocket) {
          if (otherSocket !== socket)

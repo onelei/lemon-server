@@ -3,23 +3,23 @@
  * Use to print log in console.
  */
 var colors = require('colors/safe');
-var LColor = require('../Framework/LColor');
+var LColor = require('../Framework/Lm_Color');
 
-var Debug = function()
+var Lm_Debug = function()
 {
 
 };
 
-module.exports = Debug;
+module.exports = Lm_Debug;
 
 // print log;
-Debug.log = function(msg)
+Lm_Debug.log = function(msg)
 {
     console.log(msg);
 };
 
 // print log;
-Debug.log = function(msg,color)
+Lm_Debug.log = function(msg,color)
 {
     switch(color)
     {
@@ -43,6 +43,9 @@ Debug.log = function(msg,color)
         {
             console.log(colors.blue(msg));
         }break;
+        default:
+        {
+            console.log(msg);
+        }break;
     }
-    console.log(msg);
 };
