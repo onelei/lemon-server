@@ -2,7 +2,7 @@
  * Created by onelei on 2015/8/6.
  * Answer the client request.
  */
-var Client = require('Client.js');
+var Client = require('./Lm_RemoteClient.js');
 
 var Lm_Response = function()
 {
@@ -12,7 +12,7 @@ var Lm_Response = function()
 module.exports = Lm_Response;
 
 // Answer request;
-Lm_Response.write = function(server,data)
+Lm_Response.send = function(server,data)
 {
     server.write('You said "' + data + '"');
 };

@@ -3,7 +3,7 @@
  * Use to print log in console.
  */
 var colors = require('colors/safe');
-var LColor = require('../Framework/Lm_Color');
+var LColor = require('./Lm_Color');
 
 var Lm_Debug = function()
 {

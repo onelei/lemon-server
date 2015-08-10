@@ -8,22 +8,24 @@ var Debug = require('../Framework/Lm_Debug.js');
 var LColor = require('../Framework/Lm_Color.js');
 var RemoteClient = require('../Framework/Lm_RemoteClient.js');
 
-var HOST = '127.0.0.1';
-var PORT = 8080;
 
 module.exports = Lm_MainServer;
 
-function Lm_MainServer(bucket)
+function Lm_MainServer()
 {
-
+    // load config;
+    var config = require('./config/config.json');
+    this.HOST = config.host;
+    this.PORT = config.port;
 }
 
+// create server;
 Lm_MainServer.prototype.Start = function()
 {
     // Create TCP ;
     net.createServer(function(socket) {
 
-        // 我们获得一个连接 - 该连接自动关联一个socket对象
+        // record client;
         RemoteClient.add(socket);
 
         Debug.log('one client connect !');
@@ -51,9 +53,9 @@ Lm_MainServer.prototype.Start = function()
         });
 
 
-    }).listen(PORT, HOST);
+    }).listen(this.PORT, this.HOST);
 
-    Debug.log('Server listening on ' + HOST +':'+ PORT,LColor.green);
+    Debug.log('Server listening on ' + this.HOST +':'+ this.PORT,LColor.green);
 }
 
 

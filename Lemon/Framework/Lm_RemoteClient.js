@@ -2,7 +2,7 @@
  * Created by onelei on 2015/8/7.
  */
 
-var Debug = require('../Framework/Lm_Debug.js');
+var Debug = require('./Lm_Debug.js');
 
 // 内部变量私有的,不能给下面的静态函数调用;
 var Lm_RemoteClient = function()
