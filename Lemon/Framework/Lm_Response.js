@@ -12,17 +12,20 @@ var Lm_Response = function()
 module.exports = Lm_Response;
 
 // Answer request;
-Lm_Response.send = function(server,data)
+Lm_Response.send = function(socket,data)
 {
-    server.write('You said "' + data + '"');
+    var host = socket.remoteAddress;
+    var port = socket.remotePort;
+
+    socket.write('Client:'+host+':'+port+' said :' + data);
 };
 
-Lm_Response.sendAll = function(socket,data)
+Lm_Response.sendAll = function(data)
 {
     Client.clients.forEach(function(otherSocket) {
-         if (otherSocket !== socket)
-         {
+        // if (otherSocket !== socket)
+         //{
             otherSocket.write(data);
-         }
+         //}
     });
 };

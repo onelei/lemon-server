@@ -13,8 +13,8 @@ var client = new net.Socket();
 client.connect(PORT, HOST, function() {
 
     console.log('CONNECTED TO: ' + HOST + ':' + PORT);
-    // 建立连接后立即向服务器发送数据，服务器将收到这些数据
-    client.write('I am Chuck Norris!');
+    // send data to server;
+    client.write('I am one lei!');
 
 });
 
