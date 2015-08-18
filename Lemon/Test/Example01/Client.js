@@ -14,7 +14,7 @@ client.connect(PORT, HOST, function() {
 
     console.log('CONNECTED TO: ' + HOST + ':' + PORT);
     // send data to server;
-    client.write('I am one lei!');
+    client.write('I am 卧龙!');
 
 });
 
