@@ -13,10 +13,10 @@ var Lm_Couchbase = function()
 
 module.exports = Lm_Couchbase;
 
-// 增加;
-Lm_Couchbase.insert = function(document_name,value)
+// insert ;
+Lm_Couchbase.insert = function(bucket,document_name,value)
 {
-    var myBucket = myCluster.openBucket();
+    var myBucket = myCluster.openBucket(bucket);
     myBucket.insert(document_name, {some:value}, function(err, res)
     {
         if (err)
@@ -28,10 +28,10 @@ Lm_Couchbase.insert = function(document_name,value)
     });
 }
 
-// 查询;
-Lm_Couchbase.get = function(document_name)
+// get;
+Lm_Couchbase.get = function(bucket,document_name)
 {
-    var myBucket = myCluster.openBucket();
+    var myBucket = myCluster.openBucket(bucket);
     myBucket.get(document_name, function(err, res)
     {
         if (err)
@@ -43,10 +43,10 @@ Lm_Couchbase.get = function(document_name)
     });
 }
 
-// 更新;
-Lm_Couchbase.replace = function(document_name,value)
+// replace;
+Lm_Couchbase.replace = function(bucket,document_name,value)
 {
-    var myBucket = myCluster.openBucket();
+    var myBucket = myCluster.openBucket(bucket);
     myBucket.replace(document_name, {some: value}, function(err, res)
     {
         if (err)
@@ -58,10 +58,10 @@ Lm_Couchbase.replace = function(document_name,value)
     });
 }
 
-// 删除;
-Lm_Couchbase.remove = function(document_name)
+// remove;
+Lm_Couchbase.remove = function(bucket,document_name)
 {
-    var myBucket = myCluster.openBucket();
+    var myBucket = myCluster.openBucket(bucket);
     myBucket.remove(document_name, function(err, res)
     {
         if (err)
@@ -73,7 +73,7 @@ Lm_Couchbase.remove = function(document_name)
     });
 }
 
-// 获取多张表;
+// getMulti;
 Lm_Couchbase.getMulti = function(document_name_1,document_name_2)
 {
     var myBucket = myCluster.openBucket();

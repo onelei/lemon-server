@@ -7,7 +7,8 @@ var net = require('net');
 var Debug = require('../Framework/Lm_Debug.js');
 var LColor = require('../Framework/Lm_Color.js');
 var RemoteClient = require('../Framework/Lm_RemoteClient.js');
-var Response = require('../Framework/Lm_Response');
+var Response = require('../Framework/Lm_Response.js');
+var couchbase = require('../Framework/Lm_Couchbase.js');
 
 module.exports = Lm_MainServer;
 
@@ -34,10 +35,18 @@ Lm_MainServer.prototype.Start = function()
 
         // data;
         socket.on('data', function(data) {
-            Debug.log('DATA ' + socket.remoteAddress+':'+socket.remotePort + 'said: ' + data);
+            Debug.log('DATA ' + socket.remoteAddress+':'+socket.remotePort + ' said: ' + data);
             // 回发该数据，客户端将收到来自服务端的数据
             //socket.write('You said "' + data + '"');
             Response.send(socket,data);
+
+            // test couchbase;
+           /* var bucketname = "test";
+            var douchment_name = "test02";
+            var value = "tmp2";
+            couchbase.remove(bucketname,douchment_name);*/
+
+            //
         });
 
         // close;

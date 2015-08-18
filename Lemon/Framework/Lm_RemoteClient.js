@@ -4,7 +4,7 @@
 
 var Debug = require('./Lm_Debug.js');
 
-// 内部变量私有的,不能给下面的静态函数调用;
+//rc
 var Lm_RemoteClient = function()
 {
 
@@ -15,7 +15,7 @@ var client_num = 0;
 
 module.exports = Lm_RemoteClient;
 
-// 添加客户端;
+// add client;
 Lm_RemoteClient.add = function(socket)
 {
     clients.push(socket);
@@ -24,7 +24,7 @@ Lm_RemoteClient.add = function(socket)
     Debug.log('client_num: '+client_num);
 };
 
-// 删除客户端;
+// remove client;
 Lm_RemoteClient.remove = function(socket)
 {
     var index = clients.indexOf(socket);

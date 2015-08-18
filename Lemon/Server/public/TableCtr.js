@@ -4,7 +4,7 @@
 
 var TableCtr = module.exports;
 
-// ¶Á±í;
+// read table;
 TableCtr.load = function (key, val) {
     val = require(val);
     this.set(key, val);
