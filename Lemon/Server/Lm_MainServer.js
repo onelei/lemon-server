@@ -9,6 +9,7 @@ var LColor = require('../Framework/Lm_Color.js');
 var RemoteClient = require('../Framework/Lm_RemoteClient.js');
 var Response = require('../Framework/Lm_Response.js');
 var couchbase = require('../Framework/Lm_Couchbase.js');
+var transform = require('../Framework/Lm_Transform');
 
 module.exports = Lm_MainServer;
 
@@ -18,6 +19,16 @@ function Lm_MainServer()
     var config = require('./config/config.json');
     this.HOST = config.host;
     this.PORT = config.port;
+
+    // test json switch;
+    /*var json = {
+        'host': '127.0.0.1',
+        'port': '8001'
+    };
+    var string = transform.stringify(json);
+    json = transform.parse(string);
+    transform.stringify(json);*/
+
 }
 
 // create server;
@@ -46,7 +57,6 @@ Lm_MainServer.prototype.Start = function()
             var value = "tmp2";
             couchbase.remove(bucketname,douchment_name);*/
 
-            //
         });
 
         // close;

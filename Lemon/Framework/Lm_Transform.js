@@ -11,9 +11,25 @@ var Lm_Transform= function()
 
 module.exports = Lm_Transform;
 
-// parse json in message;
-Lm_Transform.parse = function(msg)
+/**
+* parse json ;
+*/
+Lm_Transform.parse = function(string)
 {
-    console.log(msg);
+    console.log('parse');
+    var json = JSON.parse(string);
+    console.log(json);
+    return json;
 };
 
+/**
+ * stringfy json
+ * return string;
+ */
+Lm_Transform.stringify = function(json)
+{
+    console.log('stringify');
+    var string = JSON.stringify(json);
+    console.log(string);
+    return string;
+};
