@@ -52,10 +52,10 @@ Lm_MainServer.prototype.Start = function()
             Response.send(socket,data);
 
             // test couchbase;
-           /* var bucketname = "test";
+            var bucketname = "test";
             var douchment_name = "test02";
             var value = "tmp2";
-            couchbase.remove(bucketname,douchment_name);*/
+            couchbase.remove(bucketname,douchment_name);
 
         });
 
