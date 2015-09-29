@@ -1,5 +1,5 @@
 #!/bin/sh
-cd Server
+cd server
 node App.js
 
 

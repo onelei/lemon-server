@@ -4,12 +4,12 @@
  */
 
 var net = require('net');
-var Debug = require('../Framework/Lm_Debug.js');
-var LColor = require('../Framework/Lm_Color.js');
-var RemoteClient = require('../Framework/Lm_RemoteClient.js');
-var Response = require('../Framework/Lm_Response.js');
-var couchbase = require('../Framework/Lm_Couchbase.js');
-var transform = require('../Framework/Lm_Transform');
+var Debug = require('../framework/Lm_Debug.js');
+var LColor = require('../framework/Lm_Color.js');
+var RemoteClient = require('../framework/Lm_RemoteClient.js');
+var Response = require('../framework/Lm_Response.js');
+var couchbase = require('../framework/Lm_Couchbase.js');
+var transform = require('../framework/Lm_Transform');
 
 module.exports = Lm_MainServer;
 
