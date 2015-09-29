@@ -2,7 +2,7 @@
  * Created by onelei on 2015/8/7.
  */
 
-var Debug = require('./Lm_Debug.js');
+var Debug = require('./lmDebug.js');
 
 //rc
 var Lm_RemoteClient = function()

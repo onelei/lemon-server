@@ -1,3 +1,3 @@
 #!/bin/sh
-cd Test/Example01 
-node Start.js
+cd test/example01
+node start.js

@@ -3,7 +3,7 @@
  */
 
 
-var Client = require('./Client.js');
+var Client = require('./client.js');
 
 var App = new Client();
 App.Start();

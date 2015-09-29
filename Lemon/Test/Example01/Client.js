@@ -4,13 +4,13 @@
  */
 
 var net = require('net');
-var Debug = require('../../Framework/Lm_Debug.js');
+var Debug = require('../../framework/lmDebug.js');
 module.exports = Client;
 
 function Client()
 {
     // load config;
-    var config = require('../../Server/config/config.json');
+    var config = require('../../server/config/config.json');
     this.HOST = config.host;
     this.PORT = config.port;
 }

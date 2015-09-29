@@ -2,7 +2,7 @@
  * Created by onelei on 2015/8/6.
  * Answer the client request.
  */
-var Client = require('./Lm_RemoteClient.js');
+var Client = require('./lmRemoteClient.js');
 
 var Lm_Response = function()
 {

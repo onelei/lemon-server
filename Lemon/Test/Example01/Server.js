@@ -4,7 +4,7 @@
  */
 
 var net = require('net');
-var Debug = require('../../Framework/Debug.js');
+var Debug = require('../../framework/Debug.js');
 
 var HOST = '127.0.0.1';
 var PORT = 8080;
