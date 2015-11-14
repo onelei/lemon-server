@@ -4,7 +4,7 @@
  */
 
 var net = require('net');
-var Debug = require('../../framework/Debug.js');
+var Debug = require('../../framework/lmDebug.js');
 
 var HOST = '127.0.0.1';
 var PORT = 8080;
@@ -37,6 +37,6 @@ net.createServer(function(socket) {
 
 }).listen(PORT, HOST);
 
-Debug.log('Server listening on ' + HOST +':'+ PORT);
+Debug.log('server listening on ' + HOST +':'+ PORT);
 
 

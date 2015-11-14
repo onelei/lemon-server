@@ -77,7 +77,7 @@ Lm_MainServer.prototype.Start = function()
 
     }).listen(this.PORT, this.HOST);
 
-    Debug.log('Server listening on ' + this.HOST +':'+ this.PORT,LColor.green);
+    Debug.log('server listening on ' + this.HOST +':'+ this.PORT,LColor.green);
 }
 
 
