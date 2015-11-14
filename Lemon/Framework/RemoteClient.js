@@ -4,10 +4,10 @@
 
 var Debug = require('../Framework/Debug.js');
 
-// ÄÚ²¿±äÁ¿Ë½ÓÐµÄ,²»ÄÜ¸øÏÂÃæµÄ¾²Ì¬º¯Êýµ÷ÓÃ;
+// ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½Ë½ï¿½Ðµï¿½,ï¿½ï¿½ï¿½Ü¸ï¿½ï¿½ï¿½ï¿½ï¿½Ä¾ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½;
 var RemoteClient = function()
 {
-
+    //
 };
 
 var clients = [];
@@ -15,7 +15,7 @@ var client_num = 0;
 
 module.exports = RemoteClient;
 
-// Ìí¼Ó¿Í»§¶Ë;
+// ï¿½ï¿½Ó¿Í»ï¿½ï¿½ï¿½;
 RemoteClient.add = function(socket)
 {
     clients.push(socket);
@@ -25,7 +25,7 @@ RemoteClient.add = function(socket)
     Debug.log(client_num);
 };
 
-// É¾³ý¿Í»§¶Ë;
+// É¾ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½;
 RemoteClient.remove = function(socket)
 {
     var index = clients.indexOf(socket);

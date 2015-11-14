@@ -43,6 +43,9 @@ Debug.log = function(msg,color)
         {
             console.log(colors.blue(msg));
         }break;
+        default:
+        {
+            console.log(msg);
+        }break;
     }
-    console.log(msg);
 };
