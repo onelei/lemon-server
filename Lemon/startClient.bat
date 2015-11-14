@@ -1,2 +1,2 @@
-cd Test\Example01
-node Client.js
+cd test\example01
+node start.js

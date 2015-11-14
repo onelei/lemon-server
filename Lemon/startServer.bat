@@ -1,2 +1,2 @@
-cd Server
-node Server.js
+cd server
+node App.js
